@@ -8,20 +8,20 @@ import { AppComponent } from './app.component';
 
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { reducers } from './store';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     CoreModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production,
     }),
-    EffectsModule.forRoot([]),
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
