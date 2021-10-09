@@ -1,0 +1,31 @@
+.widget-container {
+  @apply w-60 h-72 relative flex flex-col bg-indigo-200 rounded;
+}
+
+.widget-header {
+  @apply flex flex-1 items-center justify-center text-lg;
+}
+
+.widget-item-list {
+  @apply self-center flex-[3];
+}
+
+.widget-footer {
+  @apply flex flex-1 justify-around items-center gap-3;
+
+  &__edit-buttons {
+    @apply flex gap-1;
+  }
+}
+
+.widget-edit-name {
+  @apply w-60 flex justify-between mt-2;
+
+  &__input {
+    @apply w-5/6 h-8 text-sm text-gray-500 rounded border-blue-400 bg-gray-50 bg-opacity-75 shadow;
+
+    &:focus {
+      @apply ring-1 ring-blue-400 ring-opacity-50;
+    }
+  }
+}
